@@ -27,7 +27,7 @@ defmodule Unstoppable.Worker do
   def handle_info(:schedule, state) do
     schedule_new_deployment(state.interval)
 
-    Logger.info("Running #{__MODULE__} Scheduler (/•ิ_•ิ) interval: #{state.interval} ms")
+    Logger.info("🔥 Running #{__MODULE__} Scheduler (/•ิ_•ิ) interval: #{state.interval} ms")
 
     {:noreply, state}
   end
@@ -41,6 +41,10 @@ defmodule Unstoppable.Worker do
   ### ==========================================================================
   ### Public API
   ### ==========================================================================
+
+  def nice_message do
+    "Hope your day is going well! Remember that small moments of joy matter just as much as the big ones. Take care of yourself today. 😊"
+  end
 
   ### ==========================================================================
   ### Private functions
